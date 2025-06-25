@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICT Project: Human Breathing System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    header .subtitle {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    header .student-info {
+        font-size: 1em;
+        margin-top: 5px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    section h2 {
+        color: #333;
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .task-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .task-card h3 {
+        color: #4CAF50;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .task-card p {
+        font-size: 1em;
+        color: #555;
+    }
+
+    .task-card a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .task-card a:hover {
+        background-color: #45a049;
+    }
+
+    video {
+        display: block;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    .subtitle {
+        font-size: 1.3em;
+        color: #00796b;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-shadow: 0 2px 8px #b2dfdb55;
+    }
+
+    .student-info {
+        background-color: #479ba7;
+        border-left: 5px solid #38e6d1;
+        border-radius: 8px;
+        padding: 12px 18px;
+        margin: 0 auto 18px auto;
+        max-width: 420px;
+        font-size: 1.08em;
+        color: #333;
+        box-shadow: 0 2px 10px rgba(44, 62, 80, 0.07);
+    }
+
+    .student-info span {
+        color: #146fc4;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        font-size: 1.08em;
+        display: inline-block;
+        margin-top: 6px;
+        transition: color 0.2s;
+
+
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+
+    #references {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #references ul {
+        list-style-type: none;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Exploring the Human Breathing System</h1>
+        <p class="subtitle" style="font-weight: bold;">DPTE Year Two ICT Integration Project</p>
+        <p class="student-info" style="font-weight: bold;">Name: WAFULA NASIMIYU VALENTINE <br> Index Number:
+            TA707347802</p>
+    </header>
+
+    <main>
+        <section id="tasks">
+            <h2>Project Tasks</h2>
+
+            <div class="task-card">
+                <h3>Task 1: Multimedia Presentation</h3>
+                <p>Interactive presentation of the breathing system with labeled diagrams and explanations.</p>
+                <a href="presentation.html" class="btn">View Presentation</a>
+            </div>
+
+            <div class="task-card">
+                <h3>Task 2: Balloon-Diaphragm Model Video</h3>
+                <p>Demonstration video showing how the diaphragm works during breathing.</p>
+                <video controls width="300">
+                    <source src="assets/balloon-model.mp4" type="video/mp4">
+                    Your browser doesn't support HTML5 video.
+                </video>
+                <p><a href="assets/balloon-model.mp4" download>Download Video</a></p>
+            </div>
+
+            <div class="task-card">
+                <h3>Task 3: Online Quiz</h3>
+                <p>5-question multiple choice quiz about the breathing system.</p>
+                <a href="online-quiz.html" class="btn">Take the Quiz</a>
+            </div>
+
+            <div class="task-card">
+                <h3>Task 4: Performance Spreadsheet</h3>
+                <p>Class performance analysis with chart visualization.</p>
+                <a href="results.html" target="_blank" class="btn">View
+                    Spreadsheet</a>
+            </div>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ol>
+                <li>National Institutes of Health. (2023). <a href="https://www.nih.gov/respiration">Respiratory system
+                        anatomy</a></li>
+                <li>World Health Organization. (2023). <a href="https://www.who.int/respiratory-health">Breathing and
+                        respiratory health</a></li>
+                <li>MedlinePlus. (2023). <a href="https://medlineplus.gov/howlungswork">How the lungs work</a></li>
+                <li>Healthline. (2023). <a href="https://www.healthline.com/health/respiratory-system">Understanding the
+                        respiratory system</a></li>
+                <li>WebMD. (2023). <a href="https://www.webmd.com/lung-health/breathing-exercises">Breathing exercises
+                        for lung health</a></li>
+                <li>Visible Body. (2024). <a href="https://www.visiblebody.com">Breathing process animation</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 ICT Integration Project | Submitted for DPTE Year Two Assessment</p>
+    </footer>
+    <script>
+        console.log("Welcome to the Human Breathing System project!");
+    </script>
+</body>
+
+</html>

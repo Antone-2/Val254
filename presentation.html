@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Human Breathing System - Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Georgia:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #e0f7fa 0%, #fffde7 100%);
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .presentation-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+            overflow: hidden;
+            padding-bottom: 30px;
+        }
+
+        .slide {
+            display: none;
+            padding: 40px 30px 20px 30px;
+            text-align: center;
+            min-height: 500px;
+        }
+
+        .active-slide {
+            display: block;
+            animation: fadeIn 0.7s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #146fc4;
+            font-family: Georgia, serif;
+        }
+
+        .slide img {
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10);
+            margin-bottom: 18px;
+        }
+
+        #diagram {
+            position: relative;
+            width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .label {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 15px;
+            color: #00796b;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+        }
+
+        .label-nasal-cavity {
+            top: 40px;
+            left: 120px;
+        }
+
+        .label-pharynx {
+            top: 90px;
+            left: 180px;
+        }
+
+        .label-larynx {
+            top: 120px;
+            left: 210px;
+        }
+
+        .label-trachea {
+            top: 170px;
+            left: 250px;
+        }
+
+        .label-bronchi {
+            top: 230px;
+            left: 270px;
+        }
+
+        .label-lungs {
+            top: 200px;
+            left: 370px;
+        }
+
+        .label-diaphragm {
+            top: 320px;
+            left: 260px;
+        }
+
+        #narration {
+            margin: 20px auto 0 auto;
+            padding: 14px 18px;
+            background: #e0f2f1;
+            border-radius: 8px;
+            max-width: 600px;
+            color: #333;
+            font-size: 17px;
+        }
+
+        .part-buttons {
+            margin-top: 10px;
+        }
+
+        .part-buttons button {
+            margin: 6px 8px;
+            padding: 10px 18px;
+            background: #46d4c4;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .part-buttons button:hover {
+            background: #bd147c;
+        }
+
+        .slide-controls {
+            text-align: center;
+            margin-top: 18px;
+        }
+
+        .slide-controls button {
+            margin: 0 10px;
+            padding: 10px 28px;
+            background: #ffb300;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .slide-controls button:hover {
+            background: #ffa000;
+        }
+
+        .video-container {
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #00796b;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-shadow: 0 2px 8px #b2dfdb55;
+        }
+
+        .student-info {
+            background: linear-gradient(90deg, #d8a8ca 60%, #38b4bd 100%, #da45ad 60%);
+            border-left: 5px solid #38e6d1;
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin: 0 auto 18px auto;
+            max-width: 420px;
+            font-size: 1.08em;
+            color: #333;
+            box-shadow: 0 2px 10px rgba(44, 62, 80, 0.07);
+        }
+
+        .student-info span {
+            color: #146fc4;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            font-size: 1.08em;
+            display: inline-block;
+            margin-top: 6px;
+            transition: color 0.2s;
+
+
+        }
+
+        .slide p {
+            font-size: 1.13em;
+            color: #444;
+            line-height: 1.7;
+            margin: 18px auto 0 auto;
+            max-width: 650px;
+            text-align: justify;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .slide p span {
+            color: #146fc4;
+            font-weight: bold;
+            font-size: 1.08em;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-top: 6px;
+            transition: color 0.2s;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="presentation-container">
+        <div class="slide active-slide">
+            <h1>The Human Breathing System</h1>
+            <p class="subtitle">DPTE Year Two ICT Integration Project</p>
+            <p class="student-info">Name: <span>Wafula Nasimiyu Valentine</span> <br>Index-Number:
+                <span>TA707347802</span>
+            </p>
+            <p>The <span>human breathing system</span> is a complex network of organs responsible
+                for taking in oxygen and expelling carbon dioxide. <br>This vital process ensures our body receives
+                oxygen needed for survival.</p>
+            <img src="https://media.sciencephoto.com/image/f0427654/800wm/F0427654-Anatomy_of_human_respiratory_system,_illustration.jpg"
+                alt="Human Breathing System" width="500">
+            <div id="narration">
+                <p>Click the play button to hear the introduction</p>
+                <button
+                    onclick="speak('This presentation will explore the major parts of the human breathing system and how they work together to help us breathe.')">
+                    ▶ Play Narration
+                </button>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>Parts of the Breathing System</h2>
+            <div id="diagram">
+                <img src="https://media.istockphoto.com/id/1357303619/vector/human-respiratory-system-with-description-of-the-corresponding-parts-anatomical-vector.jpg?s=612x612&w=0&k=20&c=iMLVd9EBlXNcq8Tq9FfS7i3HlZmds_cI4ip9eL5IGnI="
+                    alt="Labeled Breathing System" width="600">
+
+            </div>
+            <div id="narration">
+                <p>Click parts to hear their functions</p>
+                <div class="part-buttons">
+                    <button onclick="speakPart('nasal cavity')">Nasal Cavity</button>
+                    <button onclick="speakPart('nostril')">Nostril</button>
+                    <button onclick="speakPart('oral cavity')">Oral Cavity</button>
+                    <button onclick="speakPart('pharynx')">Pharynx</button>
+                    <button onclick="speakPart('trachea')">Trachea</button>
+                    <button onclick="speakPart('lungs')">Lungs</button>
+                    <button onclick="speakPart('larynx')">Larynx</button>
+                    <button onclick="speakPart('bronchi')">Bronchi</button>
+                    <button onclick="speakPart('bronchioles')">Bronchioles</button>
+                    <button onclick="speakPart('diaphragm')">Diaphragm</button>
+                    <button onclick="speakPart('alveoli')">Alveoli</button>
+                </div>
+            </div>
+            <div class="video-container">
+                <h3>Watch: How Your Lungs Work</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8NUxvJS-_0k" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="slide-controls">
+            <button id="prevBtn" onclick="prevSlide()">Previous</button>
+            <button id="nextBtn" onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active-slide'));
+            slides[n].classList.add('active-slide');
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+        function speak(text) {
+            if ('speechSynthesis' in window) {
+                const utterance = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('Text-to-speech not supported in your browser');
+            }
+        }
+        function speakPart(part) {
+            const descriptions = {
+                'nasal cavity': 'The nasal cavity filters, warms, and moistens the air we breathe in.',
+                'trachea': 'The trachea, or windpipe, carries air from the throat to the bronchi.',
+                'pharynx': 'The pharynx is a passage that connects the nasal cavity to the larynx and esophagus.',
+                'nostril': 'The nostrils are the external openings of the nasal cavity where air enters.',
+                'oral cavity': 'The oral cavity, or mouth, is where air can also enter the respiratory system.',
+                'larynx': 'The larynx, or voice box, contains the vocal cords and is involved in sound production.',
+                'bronchi': 'The bronchi are two large tubes that branch from the trachea into each lung.',
+                'bronchioles': 'The bronchioles are smaller branches of the bronchi that lead to the alveoli.',
+                'alveoli': 'The alveoli are tiny air sacs in the lungs where oxygen and carbon dioxide are exchanged.',
+                'lungs': 'The lungs contain tiny air sacs called alveoli where gas exchange occurs.',
+                'diaphragm': 'The diaphragm is a muscle that contracts and relaxes to help us breathe.'
+            };
+            speak(descriptions[part]);
+        }
+    </script>
+</body>
+
+</html>
